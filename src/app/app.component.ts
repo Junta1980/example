@@ -89,10 +89,6 @@ export class AppComponent implements OnInit {
     });
   }
 
-  getControls(formArray: any) {
-    return formArray as FormArray;;
-  }
-
   submit() {
     console.log(this.form.value);
   }
