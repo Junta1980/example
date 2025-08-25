@@ -7,5 +7,43 @@
   <span card-title>Profilo Utente</span>
   <div>prova</div>
 </app-card>
+<div [formGroup]="form">
+  @for(item of formConfig; track item.name){
+    @switch(item.type){
+      @case('text'){
+        <div>
+          <label>{{item.name}}</label>
+          <input type="text" [formControlName]="item.name!">
+        </div>
+      }
+      @case('email'){
+        <div>
+          <label>{{item.name}}</label>
+          <input type="email" [formControlName]="item.name!">
+        </div>
+      }
+       @case('number'){
+        <div>
+          <label>{{item.name}}</label>
+          <input type="number" [formControlName]="item.name!">
+        </div>
+      }
+       @case('array'){
+        <div formArrayName="address">
+           @for (group of getControls(form.get('address')).controls; track $index; let i=$index){ 
+            <div [formGroupName]="i">
+              <label>{{item.address[i].name}}</label>
+              <input type="text" [formControlName]="item.address[i].name">
+            </div>
+           }
+
+        </div>
+       
+      }
+    }
+  }
+
+</div>
+<button (click)="submit()">submit</button>
 <button (click)="openModal()">Apri Modale</button>
 <router-outlet></router-outlet>
