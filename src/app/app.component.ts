@@ -9,7 +9,7 @@ import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, CardComponent, ReactiveFormsModule, JsonPipe],
+  imports: [RouterOutlet, RouterLink, CardComponent, ReactiveFormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

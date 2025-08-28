@@ -10,8 +10,10 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   imports: [JsonPipe, RouterOutlet, RouterLink],
   template: `
     <pre>{{product() | json }}</pre>
-    <a [routerLink]="['drag']">Drag and Drop</a>
-    <a [routerLink]="['product']">DrawFlow</a>
+    <div  class="p-2 navbar">
+    <a [routerLink]="['drag']" >drag</a>
+    <a [routerLink]="['drawFlow']">DrawFlow</a>
+     </div>
     <router-outlet></router-outlet>
   `,
   styles: ``

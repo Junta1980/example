@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import {
   DragDropModule,
   CdkDragDrop,
-  moveItemInArray,
-  transferArrayItem,
 } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 @Component({

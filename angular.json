@@ -27,8 +27,8 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
-               "node_modules/drawflow/dist/drawflow.min.css"
+              "src/styles.scss"
+              
             ],
             "scripts": [
             ]
@@ -55,7 +55,7 @@
               "sourceMap": true
             }
           },
-          "defaultConfiguration": "production"
+          "defaultConfiguration": "development"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
